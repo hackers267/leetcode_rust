@@ -1,5 +1,3 @@
-use std::clone;
-
 #[cfg(test)]
 mod test {
     use super::*;
@@ -40,7 +38,7 @@ pub fn is_palindrome(x: i32) -> bool {
     if x < 0 {
         return false;
     }
-    let result = get_reverse(x.clone());
+    let result = get_reverse(x);
     result == x
 }
 
@@ -48,7 +46,7 @@ fn get_reverse(m:i32)->i32{
     m.to_string()
         .split("")
         .filter_map(|x| {
-            match x.to_string()=="" {
+            match x.is_empty() {
                 false=>Some(x.to_string()),
                 true=>None
             }
