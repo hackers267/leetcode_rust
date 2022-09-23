@@ -47,11 +47,14 @@ pub fn is_palindrome(x: i32) -> bool {
 fn get_reverse(m:i32)->i32{
     m.to_string()
         .split("")
-        .map(|x| x.to_string())
-        .filter(|x| x!="")
+        .filter_map(|x| {
+            match x.to_string()=="" {
+                false=>Some(x.to_string()),
+                true=>None
+            }
+        })
         .enumerate()
         .fold(0i32,|acc,(index,value)|{
-            println!("value is :{:?}",value);
             let i:i32 = value.parse().unwrap();
             acc+ i * 10_i32.pow(index as u32)
         })
