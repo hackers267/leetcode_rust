@@ -1,3 +1,5 @@
+use std::clone;
+
 #[cfg(test)]
 mod test {
     use super::*;
@@ -38,21 +40,19 @@ pub fn is_palindrome(x: i32) -> bool {
     if x < 0 {
         return false;
     }
-    let mut y: Vec<i32> = div(x);
-    fn div(y: i32) -> Vec<i32> {
-        let mut vec: Vec<i32> = vec![];
-        let i = y % 10;
-        vec.push(i);
-        let m = y / 10;
-        if m != 0 {
-            let v = div(m);
-            vec.extend_from_slice(&v);
-        }
-        vec
-    }
-    y.reverse();
-    let result = y.iter().enumerate().fold(0, |acc, (index, value)| {
-        acc + value * 10i32.pow(index as u32)
-    });
+    let result = get_reverse(x.clone());
     result == x
+}
+
+fn get_reverse(m:i32)->i32{
+    m.to_string()
+        .split("")
+        .map(|x| x.to_string())
+        .filter(|x| x!="")
+        .enumerate()
+        .fold(0i32,|acc,(index,value)|{
+            println!("value is :{:?}",value);
+            let i:i32 = value.parse().unwrap();
+            acc+ i * 10_i32.pow(index as u32)
+        })
 }
