@@ -25,13 +25,10 @@ mod test {
 pub fn count_asterisks(s: String) -> i32 {
     s.chars()
         .fold((0, true), |(count, add), c| {
-            if c == '|' {
-                return (count, !add);
-            }
-            if add && c == '*' {
-                return (count + 1, add);
-            }
-            (count, add)
+            (
+                count + if add && c == '*' { 1 } else { 0 },
+                if c == '|' { !add } else { add },
+            )
         })
         .0
 }
