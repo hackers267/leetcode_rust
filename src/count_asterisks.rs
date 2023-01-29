@@ -23,15 +23,15 @@ mod test {
 }
 
 pub fn count_asterisks(s: String) -> i32 {
-    let mut count = 0;
-    let mut calc_able = true;
-    s.chars().for_each(|c| {
-        if c == '|' {
-            calc_able = !calc_able;
-        }
-        if calc_able && c == '*' {
-            count += 1;
-        }
-    });
-    count
+    s.chars()
+        .fold((0, true), |(count, add), c| {
+            if c == '|' {
+                return (count, !add);
+            }
+            if add && c == '*' {
+                return (count + 1, add);
+            }
+            (count, add)
+        })
+        .0
 }
