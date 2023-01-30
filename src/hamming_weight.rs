@@ -18,6 +18,15 @@ mod test {
     }
 }
 
-pub fn hamming_weight(n: u32) -> i32 {
-    n.count_ones() as i32
+/// 利用和1进行与运算，为1则最后一位为1(奇数),为0则最后一位为0(偶数),
+/// 和向右移动的次数在统计出现1的次数
+pub fn hamming_weight(mut n: u32) -> i32 {
+    let mut r = 0;
+    while n != 0 {
+        if n & 1 == 1 {
+            r += 1
+        };
+        n >>= 1;
+    }
+    r
 }
