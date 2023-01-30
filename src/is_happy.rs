@@ -27,7 +27,6 @@ pub fn is_happy(n: i32) -> bool {
             return false;
         }
         hash_map.insert(n, 1);
-        println!("{n}");
         n = calc(n)
     }
     true
