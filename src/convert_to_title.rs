@@ -34,9 +34,10 @@ pub fn convert_to_title(column_number: i32) -> String {
     let mut div = column_number;
     let mut v = vec![];
     while div > 0 {
-        let remind = (div - 1) % 26;
+        let value = div - 1;
+        div = value / 26;
+        let remind = value % 26;
         v.insert(0, remind);
-        div = (div - 1) / 26;
     }
     v.iter()
         .map(|v| get_char(*v))
