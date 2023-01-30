@@ -32,10 +32,9 @@ mod test {
 /// let n = convert_to_number(String::from("FXSHRXW"));
 /// assert_eq!(n, 2147483647)
 /// ```
+/// 使用[秦九韶算法](https://baike.baidu.com/item/%E7%A7%A6%E4%B9%9D%E9%9F%B6%E7%AE%97%E6%B3%95/449196)实现
 pub fn convert_to_number(s: String) -> i32 {
-    s.chars()
-        .map(|c| (c as i32) - 64)
-        .rev()
-        .enumerate()
-        .fold(0, |acc, (i, v)| acc + v * 26_i32.pow(i as u32))
+    s.bytes()
+        .map(|v| v as i32 - 64)
+        .fold(0_i32, |acc, x| acc * 26 + x)
 }
