@@ -9,4 +9,5 @@
 - [168.Excel表列名称](./src/convert_to_title.rs)
 - [171.Excel表列序号](./src/convert_to_number.rs)
 - [191.位1的个数](./src/hamming_weight.rs)
+- [202.快乐数](./src/is_happy.rs)
 - [2315.统计星号](./src/count_asterisks.rs)
