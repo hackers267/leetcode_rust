@@ -5,4 +5,5 @@ mod hamming_weight;
 mod is_happy;
 mod is_isomorphic;
 mod is_palindrome;
+mod is_ugly;
 mod two_sum;

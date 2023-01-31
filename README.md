@@ -11,4 +11,5 @@
 - [191.位1的个数](./src/hamming_weight.rs)
 - [202.快乐数](./src/is_happy.rs)
 - [205.同构字符串](./src/is_isomorphic.rs)
+- [263.丑数](./src/is_ugly.rs)
 - [2315.统计星号](./src/count_asterisks.rs)
