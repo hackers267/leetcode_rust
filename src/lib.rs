@@ -1,3 +1,4 @@
+mod check_x_matrix;
 pub mod convert_to_number;
 mod convert_to_title;
 mod count_asterisks;
