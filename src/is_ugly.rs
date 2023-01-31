@@ -34,7 +34,7 @@ mod test {
     }
 }
 pub fn is_ugly(n: i32) -> bool {
-    if n == 0 {
+    if n < 1 {
         return false;
     }
     let mut n = n;
