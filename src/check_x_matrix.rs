@@ -34,18 +34,11 @@ mod test {
 }
 type Grid = Vec<Vec<i32>>;
 pub fn check_x_matrix(grid: Grid) -> bool {
-    let len = grid.len();
-    for (i, line) in grid.iter().enumerate() {
-        for (j, &value) in line.iter().enumerate() {
-            if is_diagonal(i, j, len) && value == 0 {
-                return false;
-            }
-            if !is_diagonal(i, j, len) && value != 0 {
-                return false;
-            }
-        }
-    }
-    true
+    grid.iter().enumerate().all(|(i, line)| {
+        line.iter()
+            .enumerate()
+            .all(|(j, &v)| (v == 0) ^ is_diagonal(i, j, line.len()))
+    })
 }
 
 fn is_diagonal(i: usize, j: usize, len: usize) -> bool {
