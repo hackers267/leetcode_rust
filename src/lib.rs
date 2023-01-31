@@ -7,4 +7,5 @@ mod is_happy;
 mod is_isomorphic;
 mod is_palindrome;
 mod is_ugly;
+mod missing_number;
 mod two_sum;

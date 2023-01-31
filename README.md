@@ -12,5 +12,6 @@
 - [202.快乐数](./src/is_happy.rs)
 - [205.同构字符串](./src/is_isomorphic.rs)
 - [263.丑数](./src/is_ugly.rs)
+- [268.丢失的数字](./src/missing_number.rs)
 - [2315.统计星号](./src/count_asterisks.rs)
 - [2319.判断矩阵是否是一个X矩阵](./src/check_x_matrix.rs)
