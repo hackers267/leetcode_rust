@@ -1,3 +1,21 @@
+//! # 168. Excel表列名称
+//!
+//! 给你一个整数 columnNumber ，返回它在 Excel 表中相对应的列名称。
+//!
+//! 例如：
+//!
+//! > A -> 1
+//! > B -> 2
+//! > C -> 3
+//! >...
+//! > Z -> 26
+//! > AA -> 27
+//! > AB -> 28
+//! >...
+//!
+//! 来源：力扣（LeetCode）
+//!
+//! 链接：<https://leetcode.cn/problems/excel-sheet-column-title>
 #[cfg(test)]
 mod test {
     use super::*;

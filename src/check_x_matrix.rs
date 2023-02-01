@@ -1,4 +1,4 @@
-//! 2319.判断矩阵是否是一个X矩阵
+//! # 2319.判断矩阵是否是一个X矩阵
 //!
 //! 题目描述：
 //!
@@ -10,7 +10,8 @@
 //! 给你一个大小为 n x n 的二维整数数组 grid ，表示一个正方形矩阵。如果 grid 是一个 X 矩阵 ，返回 true ；否则，返回 false 。
 //!
 //! 来源：力扣（LeetCode）
-//! 链接：https://leetcode.cn/problems/check-if-matrix-is-x-matrix
+//!
+//! 链接：<https://leetcode.cn/problems/check-if-matrix-is-x-matrix>
 //!
 #[cfg(test)]
 mod test {
