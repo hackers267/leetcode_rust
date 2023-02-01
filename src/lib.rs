@@ -7,6 +7,7 @@ mod hamming_weight;
 mod is_happy;
 mod is_isomorphic;
 mod is_palindrome;
+mod is_power_of_four;
 mod is_power_of_three;
 mod is_ugly;
 mod missing_number;

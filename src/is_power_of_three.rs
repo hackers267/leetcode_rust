@@ -31,19 +31,7 @@ mod test {
     }
 }
 
+/// 使用i32中3的幂的最大值来整除n判断n是否是3的幂
 pub fn is_pow_of_three(n: i32) -> bool {
-    if n < 1 {
-        return false;
-    }
-    if n == 2 {
-        return true;
-    }
-    let mut n = n;
-    while n != 3 {
-        if n % 3 != 0 {
-            return false;
-        }
-        n /= 3;
-    }
-    true
+    n > 0 && 1162261467 % n == 0
 }
