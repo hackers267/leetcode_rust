@@ -2,6 +2,7 @@ mod check_x_matrix;
 pub mod convert_to_number;
 mod convert_to_title;
 mod count_asterisks;
+mod count_bits;
 mod decode_message;
 mod hamming_weight;
 mod is_happy;
