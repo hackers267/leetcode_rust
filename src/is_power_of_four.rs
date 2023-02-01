@@ -26,19 +26,9 @@ mod test {
     }
 }
 
+/// 根据4的幂的二进制特点求解：
+/// 1. 只有1个1
+/// 2. 1之后的0的个数为偶数
 pub fn is_power_of_four(n: i32) -> bool {
-    if n < 1 {
-        return false;
-    }
-    if n == 1 {
-        return true;
-    }
-    let mut n = n;
-    while n != 4 {
-        if n % 4 != 0 {
-            return false;
-        }
-        n /= 4;
-    }
-    true
+    n > 0 && n.count_ones() == 1 && n.trailing_zeros() % 2 == 0
 }
