@@ -46,8 +46,7 @@ pub fn decode_message(key: String, message: String) -> String {
     let dict = key
         .chars()
         .filter(|&c| c != ' ')
-        .fold((0, HashMap::new()), |acc, cur| {
-            let (i, mut map) = acc;
+        .fold((0, HashMap::new()), |(i, mut map), cur| {
             let value = map.get(&cur);
             if value.is_some() {
                 (i, map)
@@ -57,10 +56,9 @@ pub fn decode_message(key: String, message: String) -> String {
             }
         })
         .1;
-    let result = message
+    message
         .chars()
         .map(|c| dict.get(&c).unwrap_or(&' '))
         .map(|&c| String::from(c))
-        .collect::<String>();
-    result
+        .collect::<String>()
 }
