@@ -11,6 +11,7 @@
 - [191.位1的个数](./src/hamming_weight.rs)
 - [202.快乐数](./src/is_happy.rs)
 - [205.同构字符串](./src/is_isomorphic.rs)
+- [231.2的幂](./src/is_power_of_two.rs)
 - [263.丑数](./src/is_ugly.rs)
 - [268.丢失的数字](./src/missing_number.rs)
 - [326.3的幂](./src/is_power_of_three.rs)
