@@ -17,6 +17,7 @@
 - [326.3的幂](./src/is_power_of_three.rs)
 - [338.比特位计数](./src/count_bits.rs)
 - [342.4的幂](./src/is_power_of_four.rs)
+- [349.两个数组的交集](./src/intersection.rs)
 - [2315.统计星号](./src/count_asterisks.rs)
 - [2319.判断矩阵是否是一个X矩阵](./src/check_x_matrix.rs)
 - [2325.解密消息](./src/decode_message.rs)

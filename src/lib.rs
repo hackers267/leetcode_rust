@@ -5,6 +5,7 @@ pub mod count_asterisks;
 pub mod count_bits;
 pub mod decode_message;
 pub mod hamming_weight;
+pub mod intersection;
 pub mod is_happy;
 pub mod is_isomorphic;
 pub mod is_palindrome;
