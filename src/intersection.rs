@@ -19,26 +19,13 @@ mod tests {
     fn intersection_is_4_9() {
         let nums1 = vec![4, 9, 5];
         let nums2 = vec![9, 4, 9, 8, 4];
-        assert_eq!(intersection(nums1, nums2), vec![9, 4]);
+        assert_eq!(intersection(nums1, nums2), vec![4, 9]);
     }
 }
 
-use std::collections::HashMap;
+use std::collections::HashSet;
 pub fn intersection(nums1: Vec<i32>, nums2: Vec<i32>) -> Vec<i32> {
-    let map = nums1.iter().fold(HashMap::new(), |mut acc, cur| {
-        acc.insert(cur, 1);
-        acc
-    });
-    nums2
-        .iter()
-        .filter(|&v| map.contains_key(v))
-        .copied()
-        .fold(vec![], |mut acc, v| {
-            if acc.contains(&v) {
-                acc
-            } else {
-                acc.push(v);
-                acc
-            }
-        })
+    let set1: HashSet<i32> = nums1.into_iter().collect();
+    let set2: HashSet<i32> = nums2.into_iter().collect();
+    set2.iter().filter(|v| set1.contains(v)).copied().collect()
 }
