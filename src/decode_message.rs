@@ -37,28 +37,33 @@ mod test {
     }
 }
 
-use std::collections::HashMap;
+fn get_idx(c: char) -> usize {
+    (c as u8 - b'a') as usize
+}
+
 pub fn decode_message(key: String, message: String) -> String {
-    let v = [
-        'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r',
-        's', 't', 'u', 'v', 'w', 'x', 'y', 'z',
-    ];
-    let dict = key
+    let v = key
         .chars()
         .filter(|&c| c != ' ')
-        .fold((0, HashMap::new()), |(i, mut map), cur| {
-            let value = map.get(&cur);
-            if value.is_some() {
-                (i, map)
+        .fold((0, [0; 26]), |(i, mut v), c| {
+            let idx = get_idx(c);
+            if v[idx] == 0 {
+                v[idx] = i + b'a';
+                (i + 1, v)
             } else {
-                map.insert(cur, v[i]);
-                (i + 1, map)
+                (i, v)
             }
         })
         .1;
     message
         .chars()
-        .map(|c| dict.get(&c).unwrap_or(&' '))
-        .map(|&c| String::from(c))
-        .collect::<String>()
+        .map(|c| {
+            if c != ' ' {
+                let idx = get_idx(c);
+                v[idx] as char
+            } else {
+                c
+            }
+        })
+        .collect()
 }
