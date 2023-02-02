@@ -18,6 +18,7 @@
 - [338.比特位计数](./src/count_bits.rs)
 - [342.4的幂](./src/is_power_of_four.rs)
 - [349.两个数组的交集](./src/intersection.rs)
+- [374.猜数字大小](./src/guess_number.rs)
 - [389.找不同](./src/find_the_difference.rs)
 - [2315.统计星号](./src/count_asterisks.rs)
 - [2319.判断矩阵是否是一个X矩阵](./src/check_x_matrix.rs)
