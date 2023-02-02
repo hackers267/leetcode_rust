@@ -10,6 +10,8 @@
 //!
 //! 链接：<https://leetcode.cn/problems/valid-perfect-square>
 
+use std::cmp::Ordering;
+
 #[cfg(test)]
 mod test {
     use super::*;
@@ -56,5 +58,16 @@ mod test {
 }
 
 pub fn is_perfect_square(n: i32) -> bool {
-    ((n as f64).sqrt() as i32).pow(2) == n
+    let mut left = 0;
+    let mut right = n;
+    while left <= right {
+        let v = left + (right - left) / 2;
+        let square = v * v;
+        match square.cmp(&n) {
+            Ordering::Equal => return true,
+            Ordering::Greater => right = v - 1,
+            Ordering::Less => left = v + 1,
+        }
+    }
+    false
 }
