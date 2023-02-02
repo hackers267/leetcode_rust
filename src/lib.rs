@@ -18,4 +18,5 @@ pub mod is_power_of_three;
 pub mod is_power_of_two;
 pub mod is_ugly;
 pub mod missing_number;
+pub mod to_hex;
 pub mod two_sum;

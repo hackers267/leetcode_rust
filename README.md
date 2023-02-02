@@ -22,6 +22,7 @@
 - [374.猜数字大小](./src/guess_number.rs)
 - [383.赎金信](./src/can_construct.rs)
 - [389.找不同](./src/find_the_difference.rs)
+- [405.数字转换为十六进制数](./src/to_hex.rs)
 - [2315.统计星号](./src/count_asterisks.rs)
 - [2319.判断矩阵是否是一个X矩阵](./src/check_x_matrix.rs)
 - [2325.解密消息](./src/decode_message.rs)
