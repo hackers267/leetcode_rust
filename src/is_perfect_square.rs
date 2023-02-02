@@ -56,11 +56,5 @@ mod test {
 }
 
 pub fn is_perfect_square(n: i32) -> bool {
-    let mut n = n;
-    let mut i = 1;
-    while n > 0 {
-        n -= i;
-        i += 2;
-    }
-    n == 0
+    ((n as f64).sqrt() as i32).pow(2) == n
 }
