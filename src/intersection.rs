@@ -19,7 +19,9 @@ mod tests {
     fn intersection_is_4_9() {
         let nums1 = vec![4, 9, 5];
         let nums2 = vec![9, 4, 9, 8, 4];
-        assert_eq!(intersection(nums1, nums2), vec![4, 9]);
+        let mut result = intersection(nums1, nums2);
+        result.sort();
+        assert_eq!(result, vec![4, 9]);
     }
 }
 

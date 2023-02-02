@@ -10,8 +10,6 @@
 //!
 //! 链接：<https://leetcode.cn/problems/valid-perfect-square>
 
-use std::cmp::Ordering;
-
 #[cfg(test)]
 mod test {
     use super::*;
