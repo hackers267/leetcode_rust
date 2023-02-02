@@ -42,25 +42,24 @@ mod test {
     }
 }
 
-use std::collections::HashMap;
+fn get_idx(c: u8) -> usize {
+    (c - b'a') as usize
+}
+
 pub fn can_construct(ransom_note: String, magazine: String) -> bool {
-    let mut dict = magazine.chars().fold(HashMap::new(), |mut acc, c| {
-        let entry = acc.entry(c);
-        let v = entry.or_insert(0);
-        *v += 1;
-        acc
+    if magazine.len() < ransom_note.len() {
+        return false;
+    }
+    let mut v = [0; 26];
+    magazine.bytes().map(get_idx).for_each(|idx| {
+        v[idx] += 1;
     });
-    for c in ransom_note.chars() {
-        let v = dict.get(&c);
-        if v.is_some() {
-            let v = *v.unwrap();
-            if v == 1 {
-                dict.remove(&c);
-            } else {
-                dict.insert(c, v - 1);
-            }
-        } else {
+    for idx in ransom_note.bytes().map(get_idx) {
+        let value = v[idx];
+        if value == 0 {
             return false;
+        } else {
+            v[idx] -= 1;
         }
     }
     true
