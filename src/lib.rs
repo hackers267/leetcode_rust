@@ -6,6 +6,7 @@ pub mod count_asterisks;
 pub mod count_bits;
 pub mod decode_message;
 pub mod find_the_difference;
+pub mod fizz_buzz;
 pub mod guess_number;
 pub mod hamming_weight;
 pub mod intersection;
