@@ -18,6 +18,7 @@
 - [338.比特位计数](./src/count_bits.rs)
 - [342.4的幂](./src/is_power_of_four.rs)
 - [349.两个数组的交集](./src/intersection.rs)
+- [367.有效的完全平方数](./src/is_perfect_square.rs)
 - [374.猜数字大小](./src/guess_number.rs)
 - [383.赎金信](./src/can_construct.rs)
 - [389.找不同](./src/find_the_difference.rs)
