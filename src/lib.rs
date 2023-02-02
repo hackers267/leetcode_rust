@@ -4,6 +4,7 @@ pub mod convert_to_number;
 pub mod convert_to_title;
 pub mod count_asterisks;
 pub mod count_bits;
+pub mod count_segments;
 pub mod decode_message;
 pub mod find_the_difference;
 pub mod fizz_buzz;
