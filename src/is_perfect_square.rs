@@ -57,17 +57,20 @@ mod test {
     }
 }
 
+fn calc_next(cur: f64, n: f64) -> f64 {
+    (cur + n / cur) / 2.0
+}
+
+/// 使用 [牛顿迭代法](https://baike.baidu.com/item/%E7%89%9B%E9%A1%BF%E8%BF%AD%E4%BB%A3%E6%B3%95/10887580) 计算一个值是否是完全平方数
 pub fn is_perfect_square(n: i32) -> bool {
-    let mut left = 0;
-    let mut right = n;
-    while left <= right {
-        let v = left + (right - left) / 2;
-        let square = v * v;
-        match square.cmp(&n) {
-            Ordering::Equal => return true,
-            Ordering::Greater => right = v - 1,
-            Ordering::Less => left = v + 1,
+    let mut cur = n as f64;
+    let min = (1.0_f64).powf(-6.0);
+    loop {
+        let next = calc_next(cur, n as f64);
+        if cur - next < min {
+            break;
         }
+        cur = next;
     }
-    false
+    n == (cur as i32) * (cur as i32)
 }
