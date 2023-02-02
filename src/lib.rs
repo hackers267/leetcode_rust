@@ -9,6 +9,7 @@ pub mod decode_message;
 pub mod find_the_difference;
 pub mod fizz_buzz;
 pub mod guess_number;
+pub mod hamming_distance;
 pub mod hamming_weight;
 pub mod intersection;
 pub mod is_happy;

@@ -25,6 +25,7 @@
 - [412.Fizz Buzz](./src/fizz_buzz.rs)
 - [405.数字转换为十六进制数](./src/to_hex.rs)
 - [434.字符串的单词数](./src/count_segments.rs)
+- [461.汉明距离](./src/hamming_distance.rs)
 - [2315.统计星号](./src/count_asterisks.rs)
 - [2319.判断矩阵是否是一个X矩阵](./src/check_x_matrix.rs)
 - [2325.解密消息](./src/decode_message.rs)
