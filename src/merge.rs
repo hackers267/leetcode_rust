@@ -78,8 +78,29 @@ mod test {
 /// assert_eq!(nums1,&[1,2])
 /// ```
 pub fn merge(nums1: &mut Vec<i32>, m: i32, nums2: &mut Vec<i32>, n: i32) {
-    for i in 0..n {
-        nums1[(m + i) as usize] = nums2[i as usize]
+    let mut p = 0;
+    let mut q = 0;
+    let mut sorted = vec![];
+    while p < m || q < n {
+        let cur = if q == n {
+            let cur = p as usize;
+            p += 1;
+            nums1[cur]
+        } else if p == m {
+            let cur = q as usize;
+            q += 1;
+            nums2[cur]
+        } else if nums1[p as usize] < nums2[q as usize] {
+            let cur = p as usize;
+            p += 1;
+            nums1[cur]
+        } else {
+            let cur = q as usize;
+            q += 1;
+            nums2[cur]
+        };
+        sorted.push(cur)
     }
-    nums1.sort()
+    nums1.truncate(0);
+    sorted.iter().for_each(|&v| nums1.push(v));
 }
