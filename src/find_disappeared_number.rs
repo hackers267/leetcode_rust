@@ -48,10 +48,10 @@ mod test {
 /// assert_eq!(result,&[2]);
 /// ```
 pub fn find_disappeared_numbers(nums: Vec<i32>) -> Vec<i32> {
-    let range = 1..=nums.len();
-    range
-        .into_iter()
-        .map(|v| v as i32)
-        .filter(|v| !nums.contains(v))
-        .collect()
+    let mut range: Vec<i32> = (1..=nums.len()).into_iter().map(|i| i as i32).collect();
+    for i in nums {
+        let idx = (i - 1) as usize;
+        range[idx] = 0;
+    }
+    range.iter().filter(|&&v| v != 0).copied().collect()
 }
