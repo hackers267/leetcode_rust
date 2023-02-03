@@ -17,6 +17,7 @@
 - [326.3的幂](./src/is_power_of_three.rs)
 - [338.比特位计数](./src/count_bits.rs)
 - [342.4的幂](./src/is_power_of_four.rs)
+- [345.反转字符串中的元音字母](./src/reverse_vowels.rs)
 - [349.两个数组的交集](./src/intersection.rs)
 - [367.有效的完全平方数](./src/is_perfect_square.rs)
 - [374.猜数字大小](./src/guess_number.rs)
