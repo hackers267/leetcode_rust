@@ -1,4 +1,4 @@
-//! 205.同构字符串
+//! # 205.同构字符串
 //!
 //! 题目内容：
 //!
@@ -9,7 +9,8 @@
 //! 每个出现的字符都应当映射到另一个字符，同时不改变字符的顺序。不同字符不能映射到同一个字符上，相同字符只能映射到同一个字符上，字符可以映射到自己本身。
 //!
 //! 来源：力扣（LeetCode）
-//! 链接：https://leetcode.cn/problems/isomorphic-strings
+//!
+//! 链接：<https://leetcode.cn/problems/isomorphic-strings>
 
 #[cfg(test)]
 mod test {
