@@ -1,3 +1,4 @@
+//! **leetcode_rust**库是一个用`Rust`语言实现 [leetcode](https://leetcode.cn) 上算法的仓库。其前期可能只会包含一部分的题目和其`Rust`实现，在后期的不断的迭代中会逐步加入题解。
 pub mod can_construct;
 pub mod check_x_matrix;
 pub mod convert_to_number;
