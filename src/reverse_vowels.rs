@@ -78,21 +78,21 @@ pub fn is_vowels(c: char) -> bool {
 /// assert_eq!(r,"holle".to_string())
 /// ```
 pub fn reverse_vowels(s: String) -> String {
-    let mut v = vec![];
-    let mut idx = vec![];
-    let mut chars = vec![];
-    for (j, c) in s.chars().enumerate() {
-        if is_vowels(c) {
-            chars.push(c);
-            idx.push(j);
-        } else {
-            v.push(c)
+    let mut p = 0;
+    let mut q = s.len() - 1;
+    let mut s: Vec<char> = s.chars().collect();
+    while p < q {
+        if !is_vowels(s[p]) {
+            p += 1;
+        }
+        if !is_vowels(s[q]) {
+            q -= 1;
+        }
+        if is_vowels(s[p]) && is_vowels(s[q]) {
+            s.swap(p, q);
+            p += 1;
+            q -= 1;
         }
     }
-    chars.reverse();
-    for (j, &c) in chars.iter().enumerate() {
-        let i = idx[j];
-        v.insert(i, c);
-    }
-    v.iter().collect()
+    s.iter().collect()
 }
