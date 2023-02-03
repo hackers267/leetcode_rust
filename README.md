@@ -6,6 +6,7 @@
 
 - [1.两数之和](./src/two_sum.rs)
 - [9.回文数](./src/is_palindrome.rs)
+- [88.合同有序数组](./src/merge.rs)
 - [168.Excel表列名称](./src/convert_to_title.rs)
 - [171.Excel表列序号](./src/convert_to_number.rs)
 - [191.位1的个数](./src/hamming_weight.rs)

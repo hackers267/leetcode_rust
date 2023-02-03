@@ -22,6 +22,7 @@ pub mod is_power_of_four;
 pub mod is_power_of_three;
 pub mod is_power_of_two;
 pub mod is_ugly;
+pub mod merge;
 pub mod missing_number;
 pub mod reverse_vowels;
 pub mod to_hex;
